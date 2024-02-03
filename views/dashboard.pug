@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Voting System
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+.container.mt-5
+  h1 Voting System
+  form(action='/vote' method='post')
+    .form-group
+      label(for='option') Choose an option:
+      select#option.form-control(name='option')
+        option(value='option1') Option 1
+        option(value='option2') Option 2
+        option(value='option3') Option 3
+    button.btn.btn-primary(type='submit') Vote
+  hr
+  a.btn.btn-success(href='/results') View Results
